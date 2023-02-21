@@ -1,0 +1,40 @@
+a. Open Git Bash
+b. start the ssh-agent in the background with the below command
+   eval "$(ssh-agent -s)"
+c. Add your SSH private key to the ssh-agent - 
+   ssh-add ~/.ssh/id_ed25519
+
+Adding the SSH key in Github - 
+a. Copy the SSH public key to your clipboard by entering the below cmd in Git bash (This copies it to your clipboard)
+   clip < ~/.ssh/id_ed25519.pub
+b. In Github, click on your profile photo and click on Settings. 
+c. In the "Access" section of the sidebar, click  SSH and GPG keys.
+d. Click New SSH key or Add SSH key.
+e. In the "Title" field, add a descriptive label for the new key.
+f. Select the type of key, either authentication or signing.
+g. Paste your public key into the "Key" field.
+h. Click Add SSH key.
+
+
+
+Git commands to be run in CLI (Command Line Interface) - 
+a.  Check GIT version 
+    git --version 
+
+b. clone - bring a repository that is hosted somewhere like Github into a folder in your local machine
+   git clone git@github.com:sharmaam23/Data-Analytics.git 
+
+
+c. add - To track your files and changes in Git folder
+   git add .            
+
+
+d. commit - Save your files in Git
+   git commit -m "Updated the file with new description"
+   (m stands for message)
+
+e. push - upload Git commits to a remote repo like Github
+   git push origin master
+   (master is the branch to update and origin is the 
+
+f. pull - download changes from remote repo to your local machine
